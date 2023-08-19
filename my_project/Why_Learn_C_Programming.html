@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+ <style>
+/*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+ </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header><hr>
+    <div class="hor_row">
+
+    </div>
+ <!---  <div class="leftside">
+        <nav>
+            <label for="" class="button">Drop Down
+                <span class="fas">+</span>
+            </label>
+            <ul class="menu">
+                <li><a href="#home">home</a></li>
+                <li>
+                    <label for="" class="first">features</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">pages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="" class="second">services</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">web design</a></li>
+                        <li><a href="#page">app design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+    --> 
+    <div class="rightside">
+    <h1>Why learning C Programming is a must?    </h1>
+    <p>C is a procedural programming language. It was initially developed by Dennis Ritchie between 1969 and 1973. It was mainly developed as a system programming language to write operating system. The main features of C language include low-level access to memory, simple set of keywords, and clean style, these features make C language suitable for system programming like operating system or compiler development. 
+    </p>
+    <p>
+        Learning C programming has lot of benefits, but the foremost thing in which it helps is to understand the underlying architecture of how things works? 
+    </p>
+    <p>The statement written in if block will execute when the expression following if evaluates to true. But when the
+        if is written with else block, then when the condition written in if block turns to be false, then the set of
+        statements in the else block will execute.
+<p>Consider a situation where a person learns to drive a Car. In this modern era with advancement in technology, we have many options when it comes to buying car. There are cars with auto-driving mode, auto gear change features etc which reduces the manual overheads and makes driving the car easier. Suppose the person learns driving on a auto-gear change enabled car. After learning driving, the person applied for a driving license for which he need to pass a driving test. The driving test is now on a manual car with no auto-gear change feature. The person was even not able to answer some basic questions related to gears as he was not even aware of it and eventually ended up getting disqualified. </p>
+        Following is the syntax of if-else statements:</p>
+    
+    <p>Learning C has a similar benefit. If the person had learned driving on a manual car, he could have easily driven the automatic car as well. Similarly, if a person learns C programming first, it will help him to learn any modern programming language as well. As learning C help to understand a lot of underlying architecture of operating system. Like, pointers, working with memory locations etc. </p>
+ <p>Let us now look at some of the important advantages of learning C programming: </p>
+ <p>
+    <ul>
+        <li>
+           <p><b>C is a Middle-Level Language.</b> The middle-level languages are somewhere between the Low-level machine understandable assembly languages and High-Level user friendly languages. Being a middle-level language, C reduces the gap between the low-level and high-level languages. It can be used for writing operating systems as well as doing application level programming.</p> 
+        </li>
+        <li>
+            <p><b>Helps to understand the fundamentals of Computer Theories</b>. Most of the theories related to computers like Computer Networks, Compiler Designing, Computer Architecture, Operating Systems are based on C programming language and requires a good knowledge of C programming if you are working on them. In the modern high level languages, the machine level details are hidden from the user, so in order to work with CPU cache, memory, network adapters, learning C programming is a must.</p>
+        </li>
+        <li>
+            <p><b>Fewer Libraries.</b> C programming language has fewer libraries in comparison with other high-level languages. So, learning C programming also clears programming concepts to a great extent as you have to write lot of things from scratch. You will not be dependent on the programming language entirely for implementing some basic operations and implementing them on your own will also help you to build your analytical skills.</p>
+        </li>
+        <li>
+            <p><b>C is very fast</b> in terms of execution time. Programs written and compiled in C execute much faster than compared to any other programming language. C programming language is very fast in terms of execution as it does not have any additional processing overheads such as garbage collection or preventing memory leaks etc. The programmer must take care of these things on his own.</p>
+        </li>
+        <li>
+            <p><b>Embedded Programming.</b> C is extensively used in Embedded Programming. Embedded Programming is also referred to as micro-controller programming, where C program is used to control micro-controllers. Microcontrollers and embedded programming is widely used in auto-motives, Robotics, Hardware etc.</p>
+        </li>
+    </ul>
+ </p>
+
+</div>
+ 
+
+<hr>
+<div class="hor_row">
+
+</div>
+<footer class="foot">
+   <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+</footer>
+</body>
+
+</html>

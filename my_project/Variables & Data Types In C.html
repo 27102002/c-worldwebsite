@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+    <style>
+        /*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+    </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <hr>
+    <div class="hor_row">
+
+    </div>
+    <div class="rightside">
+        <h1>Variables & Data Types In C:</h1>
+        <p>So guys in this article, we are going to learn about variables and go over various data types. This article
+            is mostly going to be theoretical, and we will only touch the code for the purpose of understanding, except
+            for that we will not be performing any coding related work, as theory is what makes your basis strong and
+            firm foundation can help you grasp the coding part more efficiently.
+
+            As we have already discussed in the previous article while going through identifiers that variables are
+            nothing more than simple names given to a specific space in memory for reservation. I will get into more
+            detail about it with the help of an example but first, let us cover some basics.
+        </p>
+        <h2>Declaration:</h2>
+        <p>We cannot declare a variable without specifying its data type. The data type of a variable depends on what we
+            want to store in the variable and how much space we want it to hold. The syntax for declaring a variable is
+            simple:</p>
+
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                data_type  variable_name;
+
+            </code>
+          </pre>
+        </div>
+        <p>or</p>
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                data_type  variable_name = value;
+
+            </code>
+          </pre>
+        </div>
+        <p>the data type can be int, float, char, depending on what kind of value we want to store.</p>
+        <h2>Naming a Variable:</h2>
+        <p>A variable name can be of anything we want to call out variable. Yet there are specific rules we must follow
+            while naming a variable: </p>
+        <ol>
+            <li>A variable name can contain <b>>alphabets, digits,</b> and <b>underscore</b> (-) only.</li>
+            <li>The starting letter can not be a <b>digit.</b></li>
+            <li><b>White spaces</b> cannot be used.</li>
+            <li>The name should not be <b> keyword or special character.</b></li>
+        </ol>
+        <p>We can declare and assign value to a variable in two ways.</p>
+        <h2>1st way:</h2>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                int a = 12;
+                    
+
+            </code>
+          </pre>
+    </div>
+    <h2>2nd way:</h2>
+    <div class="code-toolbar">
+        <pre class="language-c">
+        <code>
+            int a;
+a= 12;
+
+        </code>
+      </pre>
+    </div>
+    <p>Both of these have exactly the same working.
+
+        A variable as it names define can be altered, or its value can be changed, but same is not true for its type. If
+        a variable is of integer type, then it will only store an integer value, which means that we cannot assign a
+        character type value to an integer variable. We can not even store a decimal value into an integer variable.
+
+        Let’s see this with an example:</p>
+    <h2>Example 1:</h2>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                #include <stdio.h>
+
+                    int main()
+                    {
+                        int a = 12.2221;
+                        printf("Output = %d" , a);
+                        return 0;
+                    }
+                    
+            </code>
+          </pre>
+    </div>
+    <p>We are sending 12.2221 as a value in a, but since it is an integer type variable, the output will be only 12.</p>
+
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                Output = 12
+                </code>
+</pre>
+    </div>
+
+    <h2>Example 2: </h2>
+    <div class="code-toolbar">
+        <pre class="language-c">
+        <code>
+            #include <stdio.h>
+
+                int main()
+                {
+                    float a = 12.2221;
+                    printf("Output = %f" , a);
+                    return 0;
+                }
+                </stdio.h>
+                </code>
+</div>
+<p>Here we are using float as a data type. In this case, you can see the output below is 12.222100 </p>
+<div class="code-toolbar">
+    <pre class="language-c">
+        <code>
+            Output = 12.222100
+            </code>
+    </pre>
+    </div>
+    <p>Note that we used %f instead of %d in case of float.
+
+        The reason is that int can store only <b>2 bytes</b> worth data as its storage capacity is 2 bytes while float
+        storage capacity is <b>4 bytes.</b></p>
+    <div class="table">
+        <table border="2">
+            <tr>
+                <td><b>DATA TYPE</b></td>
+                <td><b>
+                        MEMORY (BYTES)</b></td>
+                <td><b>
+                        RANGE</b></td>
+            </tr>
+            <tr>
+                <td>Char</td>
+                <td> 1 </td>
+                <td>-128 to 127</td>
+            </tr>
+            <tr>
+                <td> signed char</td>
+                <td> 1 </td>
+                <td>-128 to 127</td>
+            </tr>
+            <tr>
+                <td>unsigned char</td>
+                <td>1 </td>
+                <td>
+                    0 to 255</td>
+            </tr>
+            <tr>
+                <td> short int</td>
+                <td> 2 </td>
+                <td>-32,768 to 32,767</td>
+            </tr>
+            <tr>
+                <td>unsigned short int</td>
+                <td> 2</td>
+                <td>
+                    0 to 65,535</td>
+            </tr>
+            <tr>
+                <td>unsigned int</td>
+                <td>4</td>
+                <td>0 to 65,535</td>
+            </tr>
+            <tr>
+                <td>int</td>
+                <td> 2</td>
+                <td>-32,768 to 32,767</td>
+            </tr>
+            <tr>
+                <td>long int</td>
+                <td>4</td>
+                <td>-2,147,483,648 to 2,147,483,647</td>
+            </tr>
+            <tr>
+                <td>unsigned long int</td>
+                <td>4</td>
+                <td>0 to 4,294,967,295</td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>double</td>
+                <td>8</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>long double</td>
+                <td>10</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <h2>Code as described/written in the article</h2>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                #include <stdio.h>
+
+                    int main()
+                    {
+                       
+                        printf("%lu",sizeof(int));
+                        return 0;
+                    }
+                </code>
+                </pre>
+    </div>
+
+ 
+</div>
+
+<hr>
+<div class="hor_row">
+
+</div>
+<footer class="foot">
+   <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+</footer>
+</body>
+
+</html>

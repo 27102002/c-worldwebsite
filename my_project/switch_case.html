@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+    <style>
+        /*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+    </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <hr>
+    <div class="hor_row">
+
+    </div>
+    <div class="rightside">
+        <h1>Switch Case Control Statements In C</h1>
+        <p>In this article we are going to learn about control statements. C language provides us a special control statement that allows us to handle different cases effectively instead of using a series of if statements. This control instruction is the main focus of this article.
+        </p>
+        <p>The control statement that allows us to make a decision effectively from the number of choices is called a switch, or a switch case-default since these three keywords go together to make up the control statement. The expression in switch returns an integral value, which is then compared with the different cases. Switch executes that block of code, which matches the case value. If the value does not match with any of the cases, then the default block is executed. The syntax of the switch statement is:
+       </p>
+       <div class="code-toolbar">
+        <pre class="language-c">
+        <code>
+            switch ( integer expression )
+            {  
+            case value 1 :   
+            do this ;
+              
+            case value 2 :  
+             do this ;  
+            
+            case value 3 :   
+            do this ;  
+            
+            default :   
+            do this ;
+             }
+
+        </code>
+      </pre>
+    </div>
+
+            <h2>Explanation of the general form of Switch Statement:-</h2>
+        <p>The expression following the switch can be an integer expression or a character expression. The case value 1, 2 are case labels that are used to identify each case individually. Remember that case labels should be different. If it is the same, it may create a problem while executing a program. At the end of the Case labels, we always use a colon ( : ). Each case is associated with a block. A block contains multiple statements that are grouped for a particular case.</p>
+        
+        <p>Whenever the switch is executed, the value of test-expression is compared with all the cases present in switch statements. When the case is found, the block of statements associated with that particular case will execute. The break keyword indicates the end of a particular case. If we do not put the break in each case, then even though the specific case is executed, C's switch will continue to execute all the cases until the end is reached. The default case is optional. Whenever the expression's value is not matched with any of the cases inside the switch, then the default will be executed. </p>
+
+<h2>Example of Switch in C :-</h2>
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                #include <stdio.h>
+
+                    int main() {
+                        int i = 9;
+                
+                        switch (i) {
+                            case 5:
+                            printf("Value is 7");
+                                break;
+                
+                            case 0:
+                            printf("Value is 8");
+                                break;
+                
+                            case 9:
+                            printf("Value is 9");
+                                break;
+                
+                            default:
+                            printf("Value is not present");
+                                break;
+                        }
+                        return 0;
+                    }
+
+            </code>
+          </pre>
+        </div>
+        <p>Note -: It is not necessary to use break keyword after every case. When we do not want to terminate our case at that time, we will not use the break keyword.</p>
+        <h2>Nested Switch in C:</h2>
+        <p>We can also use nested switch statements i.e., switch inside another switch. Also, the case constants of the inner and outer switch may have common values without any conflicts.
+
+            the syntax of the nested switch is:</p>
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                switch(expression 1)
+                {
+                 Case 1:
+                   printf(“Switch Statement 1”);
+               
+               switch(expression 2)
+               {
+                 Case 1:
+                 printf(“Switch Statement 2”);
+                 Break;
+               
+                 Case 2:
+                 Do this;
+               }
+               break;
+               
+                Case 2:
+                Do this;
+               }
+            </code>
+          </pre>
+        </div>
+
+        <h2>Why do we need a Switch case?</h2>
+        <p>There is one problem with the if statement: the program's complexity increases whenever the number of if statements increases. If we use multiple if-else statements in the program, the code might become difficult to read and comprehend. Sometimes it also even confuses the developer whom himself wrote the program. Using the switch statement is the solution of this problem. </p>
+        <h2>Rules for Switch Statement -:</h2>
+        <ol>
+
+       
+        <li><p>The test expression of Switch must be an int or char.</p></li>
+        <li><p>The value of the case should be an integer or character.</p></li>
+        <li><p>Cases should be inside the switch statement.</p></li>
+        <li><p>Using the break keyword in the switch statement is not necessary.</p></li>
+        <li><p>The case label values inside the switch should be unique. </p></li>i
+    </ol>
+    <h2>Difference between a switch and if:</h2>
+    <ul>
+        <li><p>Switch statements cannot evaluate float conditions, and the test expression can be an integer or a character, whereas if statements can evaluate float conditions.</p> </li>
+        <li><p>The switch statement cannot evaluate relational operators i.e., they are not allowed in switch statements, whereas if statements can evaluate relational operators. switch </p></li>
+        <li><p>Cases in the switch can never have variable expressions; for example, we cannot write case a +3 : </p></li>
+    </ul>
+<h2>Code as described/written in the article</h2>
+
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                #include <stdio.h>
+
+                    int main()
+                    {
+                        int age, marks;
+                        printf("Enter your age\n");
+                        scanf("%d", &age);
+                    
+                        printf("Enter your marks\n");
+                        scanf("%d", &marks);
+                    
+                        switch (age)
+                        {
+                            case 3:
+                                printf("The age is 3\n");
+                                switch (marks)
+                                {
+                                    case 45:
+                                        printf("Your marks are 45");
+                                        break;
+                                
+                                    default:
+                                        printf("your marks are not 45");
+                                }
+                                break;
+                    
+                            case 13:
+                                printf("The age is 13\n");
+                                break;
+                    
+                            case 23:
+                                printf("The age is 23\n");
+                                break;
+                    
+                            default:
+                                printf("Age is not 3, 13 or 23\n");
+                            
+                        }
+                    
+                    
+                        return 0;
+                    }
+                    
+                    
+             
+            </code>
+          </pre>
+        </div>
+        <p>The output is 1 i.e. True.</p>
+
+        <p>If we change the value of a or b the value will be false or 0.</p>
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                int a = 1;
+    int b = 2;
+    printf("a == b = %d\n", a==b);
+
+            </code>
+          </pre>
+        </div>
+      
+
+
+    <hr>
+    <div class="hor_row">
+
+    </div>
+    <footer class="foot">
+        <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar{
+           -webkit-text-size-adjust: 100%;
+    --font-sofia: sofia-pro,sans-serif;
+    --font-din: "urw-din",sans-serif;
+    --transition-time: 0.4s;
+    --color-gfg-bg: rgba(48, 141, 70, 0.1);
+    --scroller-color: #B6B6B6;
+    --font-section-head: 27.5pt;
+    --font-section-subhead: 14pt;
+    --font-article-head: 14pt;
+    --font-article-subtext: 12pt;
+    --font-article-text: 10pt;
+    --font-article-tags: 10pt;
+    --font-w-article-head: 600;
+    --font-w-article-text: 400;
+    --image-grid: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/is3_20210803.svg.svg);
+    font-family: Roboto,sans-serif;
+    text-rendering: optimizeLegibility;
+    color: rgba(0,0,0,.84);
+    --color-gfg: #308D46;
+    --color-black: #FFFFFF;
+    --color-blue: #FFFFFF;
+    --gfg-body-color: #131417;
+    --gfg-wrapper-bg: #292929;
+    --gfg-tint-color: #222221;
+    --gfg-selected-color: #39393c;
+    --gfg-title-color: #FFFFFF;
+    --gfg-subtitle-color: #FFFFFF;
+    --gfg-tags-color: #989898;
+    --gfg-text-color: #989898;
+    --gfg-color-lg: #FFFFFF;
+    --gfg-grey-bg: #2A2A2C;
+    --gfg-darkgrey: #404040;
+    --gfg-light-bg: #222221;
+    --gfg-tags-base-color: #308D46;
+    --search-bg-color: #2A2A2C;
+    --search-border-color: transparent;
+    --color-gfg-alternate: #2A2A2C;
+    --gfg-footer-text-color: #FFFFFF;
+    --gfg-article-text-color: #FFFFFF;
+    --search-text-color: #FFFFFF;
+    --gfg-sidebars-color: #2A2A2C;
+    --gfg-lightbg-color: #222221;
+    --gfg-rightbar-header: #FFFFFF;
+    --gfg-tech-scripter: #FFFFFF;
+    --gfg-hover-color: #2a2a2a;
+    --gfg-body-color-alternate: #131417;
+    --gfg-head-shadow: #8471712b;
+    --gfg-green-white: #FFFFFF;
+    --faded-green: #FFFFFF24;
+    --navy-blue-to-white: #FFFFFFB3;
+    --black-to-white: #FFFFFF;
+    --lightblue-to-lightblack: #292929;
+    --white-to-lightgrey: #8080801a;
+    --white-to-lightblack: #292929;
+    line-height: 1.5!important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    flex-basis: calc(20% - 2px);
+    max-width: calc(20% - 2px);
+    min-width: calc(20% - 2px);
+    position: sticky;
+    z-index: 999!important;
+    overflow-y: auto;
+    height: calc(100vh - 107px);
+    top: 107px;
+    }
+    .sideBar--wrap{
+    line-height: 1.5!important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background-color: var(--gfg-body-color);
+    }
+    .sidebar .leftBarList{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    list-style: none;
+    }
+    .leftBarList{
+   
+    }
+    .leftbar-dropdown{
+        -webkit-text-size-adjust: 100%;
+    --font-sofia: sofia-pro,sans-serif;
+    --font-din: "urw-din",sans-serif;
+    --transition-time: 0.4s;
+    --color-gfg-bg: rgba(48, 141, 70, 0.1);
+    --scroller-color: #B6B6B6;
+    --font-section-head: 27.5pt;
+    --font-section-subhead: 14pt;
+    --font-article-head: 14pt;
+    --font-article-subtext: 12pt;
+    --font-article-text: 10pt;
+    --font-article-tags: 10pt;
+    --font-w-article-head: 600;
+    --font-w-article-text: 400;
+    --image-grid: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/is3_20210803.svg.svg);
+    font-family: Roboto,sans-serif;
+    text-rendering: optimizeLegibility;
+    color: rgba(0,0,0,.84);
+    --color-gfg: #308D46;
+    --color-black: #FFFFFF;
+    --color-blue: #FFFFFF;
+    --gfg-body-color: #131417;
+    --gfg-wrapper-bg: #292929;
+    --gfg-tint-color: #222221;
+    --gfg-selected-color: #39393c;
+    --gfg-title-color: #FFFFFF;
+    --gfg-subtitle-color: #FFFFFF;
+    --gfg-tags-color: #989898;
+    --gfg-text-color: #989898;
+    --gfg-color-lg: #FFFFFF;
+    --gfg-grey-bg: #2A2A2C;
+    --gfg-darkgrey: #404040;
+    --gfg-light-bg: #222221;
+    --gfg-tags-base-color: #308D46;
+    --search-bg-color: #2A2A2C;
+    --search-border-color: transparent;
+    --color-gfg-alternate: #2A2A2C;
+    --gfg-footer-text-color: #FFFFFF;
+    --gfg-article-text-color: #FFFFFF;
+    --search-text-color: #FFFFFF;
+    --gfg-sidebars-color: #2A2A2C;
+    --gfg-lightbg-color: #222221;
+    --gfg-rightbar-header: #FFFFFF;
+    --gfg-tech-scripter: #FFFFFF;
+    --gfg-hover-color: #2a2a2a;
+    --gfg-body-color-alternate: #131417;
+    --gfg-head-shadow: #8471712b;
+    --gfg-green-white: #FFFFFF;
+    --faded-green: #FFFFFF24;
+    --navy-blue-to-white: #FFFFFFB3;
+    --black-to-white: #FFFFFF;
+    --lightblue-to-lightblack: #292929;
+    --white-to-lightgrey: #8080801a;
+    --white-to-lightblack: #292929;
+    line-height: 1.5!important;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    }
+    .dropdown-title,.active{
+        -webkit-text-size-adjust: 100%;
+    --font-sofia: sofia-pro,sans-serif;
+    --font-din: "urw-din",sans-serif;
+    --transition-time: 0.4s;
+    --color-gfg-bg: rgba(48, 141, 70, 0.1);
+    --scroller-color: #B6B6B6;
+    --font-section-head: 27.5pt;
+    --font-section-subhead: 14pt;
+    --font-article-head: 14pt;
+    --font-article-subtext: 12pt;
+    --font-article-text: 10pt;
+    --font-article-tags: 10pt;
+    --font-w-article-head: 600;
+    --font-w-article-text: 400;
+    --image-grid: url(https://media.geeksforgeeks.org/auth-dashboard-uploads/is3_20210803.svg.svg);
+    text-rendering: optimizeLegibility;
+    --color-gfg: #308D46;
+    --color-black: #FFFFFF;
+    --color-blue: #FFFFFF;
+    --gfg-body-color: #131417;
+    --gfg-wrapper-bg: #292929;
+    --gfg-tint-color: #222221;
+    --gfg-selected-color: #39393c;
+    --gfg-title-color: #FFFFFF;
+    --gfg-subtitle-color: #FFFFFF;
+    --gfg-tags-color: #989898;
+    --gfg-text-color: #989898;
+    --gfg-color-lg: #FFFFFF;
+    --gfg-grey-bg: #2A2A2C;
+    --gfg-darkgrey: #404040;
+    --gfg-light-bg: #222221;
+    --gfg-tags-base-color: #308D46;
+    --search-bg-color: #2A2A2C;
+    --search-border-color: transparent;
+    --color-gfg-alternate: #2A2A2C;
+    --gfg-footer-text-color: #FFFFFF;
+    --gfg-article-text-color: #FFFFFF;
+    --search-text-color: #FFFFFF;
+    --gfg-sidebars-color: #2A2A2C;
+    --gfg-lightbg-color: #222221;
+    --gfg-rightbar-header: #FFFFFF;
+    --gfg-tech-scripter: #FFFFFF;
+    --gfg-hover-color: #2a2a2a;
+    --gfg-body-color-alternate: #131417;
+    --gfg-head-shadow: #8471712b;
+    --gfg-green-white: #FFFFFF;
+    --faded-green: #FFFFFF24;
+    --navy-blue-to-white: #FFFFFFB3;
+    --black-to-white: #FFFFFF;
+    --lightblue-to-lightblack: #292929;
+    --white-to-lightgrey: #8080801a;
+    --white-to-lightblack: #292929;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    display: flex;
+    cursor: pointer;
+    font-family: var(--font-sofia);
+    padding: 13px 15px!important;
+    border-left: 0 solid transparent;
+    transition: font-weight .1s;
+    font-size: 14px!important;
+    line-height: 1.5;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--gfg-selected-color)!important;
+    font-weight: 700;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="sideBar">
+        <div class="sideBar--wrap">
+            <ul class="leftBarList">
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title active">Basics
+                        <span class="gfg-icon gfg-icon_arrow-down-thin upside"></span>
+                    </div>
+                    <ul style="">
+                        <li><a href="#">C++ Programming Language</a></li>
+                        <li><a href="#">Introduction to C++ Programming Language</a></li>
+                        <li><a href="#">Setting up C++ Development Environment</a></li>
+                        <li><a href="#">C++ Programming Basics</a></li>
+                        <li><a href="#">C++ Data Types</a></li>
+                        <li><a href="#">Variables in C++</a></li>
+                        <li><a href="#">Loops in C and C++</a></li>
+                        <li><a href="#">Decision Making in C / C++ (if , if..else, Nested if, if-else-if )</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title active">
+                        Basic Input/Output
+                        <span class="gfg-icon gfg-icon_arrow-down-thin upside"></span>
+                    </div>
+                    <ul style="">
+                        <li><a href="#">I/O Redirection in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/basic-input-output-c/?ref=lbp">Basic Input / Output
+                                in C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/clearing-the-input-buffer-in-cc/?ref=lbp">Clearing&nbsp;The&nbsp;Input&nbsp;Buffer&nbsp;In&nbsp;C/C++</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Operators<span class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/operators-c-c/?ref=lbp">Operators in C / C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/unary-operators-cc/?ref=lbp">Unary operators in
+                                C/C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/pre-increment-or-pre-decrement-with-reference-to-l-value-in-cpp/?ref=lbp">Pre-increment
+                                (or pre-decrement) With Reference to L-value in C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/new-and-delete-operators-in-cpp-for-dynamic-memory/?ref=lbp">new
+                                and delete Operators in C++ For Dynamic Memory</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title active">Arrays<span
+                            class="#"></span></div>
+                    <ul style="">
+                        <li><a href="#">Arrays in C/C++</a></li>
+                        <li class="currentpage"><a
+                                href="#">Multidimensional
+                                Arrays in C / C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/how-to-print-size-of-an-array-in-a-function-in-c/?ref=lbp">How
+                                to print size of array parameter in C++?</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Strings<span class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/stdstring-class-in-c/?ref=lbp">std::string class in
+                                C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/raw-string-literal-c/?ref=lbp">Raw String Literal in
+                                C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/array-of-strings-in-cpp-5-different-ways-to-create/?ref=lbp">Array
+                                of Strings in C++ – 5 Different Ways to Create</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/tokenizing-a-string-cpp/?ref=lbp">Tokenizing a string
+                                in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/strrchr-function-in-cpp/?ref=lbp">strrchr() function
+                                in C/C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/stringstream-c-applications/?ref=lbp">stringstream in
+                                C++ and its Applications</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Functions<span class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/functions-in-c/?ref=lbp">Functions in C/C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/default-arguments-c/?ref=lbp">Default Arguments in
+                                C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/inline-functions-cpp/?ref=lbp">Inline Functions in
+                                C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/return-from-void-functions-in-cpp/?ref=lbp">Return
+                                From Void Functions in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/functors-in-cpp/?ref=lbp">Functors in C++</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Pointers &amp; References<span
+                            class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a
+                                href="https://www.geeksforgeeks.org/pointers-in-c-and-c-set-1-introduction-arithmetic-and-array/?ref=lbp">Pointers
+                                in C and C++ | Set 1 (Introduction, Arithmetic and Array)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/opaque-pointer/?ref=lbp">Opaque Pointer</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/references-in-c/?ref=lbp">References in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/this-pointer-in-c/?ref=lbp">‘this’ pointer in C++</a>
+                        </li>
+                        <li><a href="https://www.geeksforgeeks.org/smart-pointers-cpp/?ref=lbp">Smart Pointers in C++
+                                and How to Use Them</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/pointers-vs-references-cpp/?ref=lbp">Pointers vs
+                                References in C++</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Object Oriented Programming<span
+                            class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/object-oriented-programming-in-cpp/?ref=lbp">Object
+                                Oriented Programming in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp">C++ Classes and
+                                Objects</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/inheritance-in-c/?ref=lbp">Inheritance in C++</a>
+                        </li>
+                        <li><a href="https://www.geeksforgeeks.org/polymorphism-in-c/?ref=lbp">Polymorphism in C++</a>
+                        </li>
+                        <li><a href="https://www.geeksforgeeks.org/encapsulation-in-c/?ref=lbp">Encapsulation in C++</a>
+                        </li>
+                        <li><a href="https://www.geeksforgeeks.org/abstraction-in-c/?ref=lbp">Abstraction in C++</a>
+                        </li>
+                        <li><a href="https://www.geeksforgeeks.org/function-overloading-c/?ref=lbp">Function Overloading
+                                in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/operator-overloading-c/?ref=lbp">Operator Overloading
+                                in C++</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Constructors &amp; Destructors<span
+                            class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/constructors-c/?ref=lbp">Constructors in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/copy-constructor-in-cpp/?ref=lbp">Copy Constructor in
+                                C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/destructors-c/?ref=lbp">Destructors in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/default-constructors-in-cpp/?ref=lbp">Default
+                                Constructors in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/private-destructor-in-cpp/?ref=lbp">Private
+                                Destructor in C++</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Exception Handling<span
+                            class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/exception-handling-c/?ref=lbp">Exception Handling in
+                                C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/stack-unwinding-in-c/?ref=lbp">Stack Unwinding in
+                                C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/catching-base-and-derived-classes-as-exceptions-in-cpp-and-java/?ref=lbp">Catching
+                                Base and Derived Classes as Exceptions in C++ and Java</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/catch-block-and-type-conversion-in-c/?ref=lbp">Catch
+                                block and type conversion in C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/exception-handling-and-object-destruction-in-cpp/?ref=lbp">Exception
+                                Handling and Object Destruction in C++</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">File Handling<span class="gfg-icon gfg-icon_arrow-down-thin"></span>
+                    </div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/file-handling-c-classes/?ref=lbp">File Handling
+                                through C++ Classes</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/readwrite-class-objects-fromto-file-c/?ref=lbp">Read/Write
+                                Class Objects from/to File in C++</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/c-program-to-create-a-file/?ref=lbp">C++ program to
+                                create a file</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/csv-file-management-using-c/?ref=lbp">CSV file
+                                management using C++</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/four-file-handling-hacks-which-every-cc-programmer-should-know/?ref=lbp">Four
+                                File Handling Hacks which every C/C++ Programmer should know</a></li>
+                    </ul>
+                </div>
+                <div class="leftbar-dropdown">
+                    <div class="dropdown-title">Standard Template Library (STL)<span
+                            class="gfg-icon gfg-icon_arrow-down-thin"></span></div>
+                    <ul style="display: none;">
+                        <li><a href="https://www.geeksforgeeks.org/the-c-standard-template-library-stl/?ref=lbp">The C++
+                                Standard Template Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/containers-cpp-stl/?ref=lbp">Containers in C++ STL
+                                (Standard Template Library)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/pair-in-cpp-stl/?ref=lbp">Pair in C++ Standard
+                                Template Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/list-cpp-stl/?ref=lbp">List in C++ Standard Template
+                                Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/deque-cpp-stl/?ref=lbp">Deque in C++ Standard
+                                Template Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/queue-cpp-stl/?ref=lbp">Queue in C++ Standard
+                                Template Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/priority-queue-in-cpp-stl/?ref=lbp">Priority Queue in
+                                C++ Standard Template Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/set-in-cpp-stl/?ref=lbp">Set in C++ Standard Template
+                                Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/unordered_set-in-cpp-stl/?ref=lbp">Unordered Sets in
+                                C++ Standard Template Library</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/multiset-in-cpp-stl/?ref=lbp">Multiset in C++
+                                Standard Template Library (STL)</a></li>
+                        <li><a
+                                href="https://www.geeksforgeeks.org/map-associative-containers-the-c-standard-template-library-stl/?ref=lbp">Map
+                                in C++ Standard Template Library (STL)</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/advanced-c-boost-library/?ref=lbp">Advanced C++ with
+                                Boost Library</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/algorithms-library-c-stl/?ref=lbp">library in C++
+                                STL</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

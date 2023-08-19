@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+ <style>
+    .rightside #img img{
+        margin-top: 30px;
+        margin-left: 0px;
+        height: 400px;
+        width: 400px;
+    }
+/*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+ </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header><hr>
+    <div class="hor_row">
+
+    </div>
+ <!---  <div class="leftside">
+        <nav>
+            <label for="" class="button">Drop Down
+                <span class="fas">+</span>
+            </label>
+            <ul class="menu">
+                <li><a href="#home">home</a></li>
+                <li>
+                    <label for="" class="first">features</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">pages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="" class="second">services</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">web design</a></li>
+                        <li><a href="#page">app design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+    --> 
+    <div class="rightside">
+    <h1>C Language Introduction </h1>
+    <p>C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system. The main features of the C language include low-level memory access, a simple set of keywords, and a clean style, these features make C language suitable for system programmings like an operating system or compiler development. 
+        Many later languages have borrowed syntax/features directly or indirectly from the C language. Like syntax of Java, PHP, JavaScript, and many other languages are mainly based on the C language. C++ is nearly a superset of C language (Few programs may compile in C, but not in C++). 
+    </p>
+    
+    <h1>Beginning with C programming: </h1>
+    <p>Structure of a C program 
+        After the above discussion, we can formally assess the structure of a C program. By structure, it is meant that any program can be written in this structure only. Writing a C program in any other structure will hence lead to a Compilation Error.
+        The structure of a C program is as follows:
+        <img id="img" src="StructureOfCprogram.png" alt="">
+<h3>The components of the above structure are:</h3>
+    
+    <h2>Header Files Inclusion:</h2>
+    <p> The first and foremost component is the inclusion of the Header files in a C program.  </p>
+ <p>A header file is a file with extension .h which contains C function declarations and macro definitions to be shared between several source files.
+    Some of C Header files:  </p>
+ <p>
+    <ul>
+        <li>
+           <p><b>stddef.h </b> Defines several useful types and macros.</p> 
+        </li>
+        <li>
+            <p><b>stdint.h</b>.  Defines exact width integer types.</p>
+        </li>
+        <li>
+            <p><b>stdio.h </b> Defines core input and output functions</p>
+        </li>
+        <li>
+            <p><b>stdlib.h </b>Defines numeric conversion functions, pseudo-random network generator, memory allocation</p>
+        </li>
+        <li>
+            <p><b>string.h</b>Defines string handling functions</p>
+        </li>
+        <li><p><b>math.h </b>Defines common mathematical functions</p>
+        </li>
+    </ul>
+    </p>
+    <h2>Main Method Declaration: </h2>
+<p>The next part of a C program is to declare the main() function. The syntax to declare the main function is:</p>
+<h3>Syntax to Declare the main method: </h3>
+<div class="code-toolbar">
+    <pre class="language-c">
+        <code>
+            int main()
+            {}
+</code>
+</div>
+<h3>Variable Declaration:</h3>
+<p> The next part of any C program is the variable declaration. It refers to the variables that are to be used in the function. Please note that in the C program, no variable can be used without being declared. Also in a C program, the variables are to be declared before any operation in the function.</p>
+ <p>Example: </p>
+ <div class="code-toolbar">
+    <pre class="language-c">
+        <code>
+            int main()
+{
+    int a;
+.
+.
+</code>
+</div>
+<h3>Body:</h3>
+<p>The body of a function in the C program, refers to the operations that are performed in the functions. It can be anything like manipulations, searching, sorting, printing, etc.</p>
+<p>Example:</p>
+<div class="code-toolbar">
+    <pre class="language-c">
+        <code>
+            int main()
+{
+    int a;
+
+    printf("%d", a);
+.
+.
+</code>
+</div>
+<h3>Return Statement: </h3>
+<p> The last part of any C program is the return statement. The return statement refers to the returning of the values from a function. This return statement and return value depend upon the return type of the function. For example, if the return type is void, then there will be no return statement. In any other case, there will be a return statement and the return value will be of the type of the specified return type.</p>
+<p>Example: </p>
+<div class="code-toolbar">
+    <pre class="language-c">
+        <code>
+            int main()
+{
+    int a;
+
+    printf("%d", a);
+
+    return 0;
+}
+</code>
+</div>
+<h3>Writing first program: </h3>
+<p>Following is first program in C</p>
+<div class="code-toolbar">
+    <pre class="language-c">
+        <code>
+            #include <stdio.h>
+                int main(void)
+                {
+                    printf("Hello");
+                    return 0;
+                }
+                
+</code>
+</div>
+
+
+
+
+<hr>
+<div class="hor_row">
+
+</div>
+<footer class="foot">
+   <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+ <style>
+/*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+ </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header><hr>
+    <div class="hor_row">
+
+    </div>
+ <!---  <div class="leftside">
+        <nav>
+            <label for="" class="button">Drop Down
+                <span class="fas">+</span>
+            </label>
+            <ul class="menu">
+                <li><a href="#home">home</a></li>
+                <li>
+                    <label for="" class="first">features</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">pages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="" class="second">services</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">web design</a></li>
+                        <li><a href="#page">app design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+    --> 
+    <div class="rightside">
+    <h1>C Programming Language Standard</h1>
+    <p>The idea of this article is to introduce C standard. 
+    </p>
+    <h1>What to do when a C program produces different results in two different compilers? </h1>
+    <p>
+        For example, consider the following simple C program. 
+    </p>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                void main() { }
+
+            </code>
+          </pre>
+    </div>
+    <p>The above program fails in gcc as the return type of main is void, but it compiles in Turbo C. How do we decide whether it is a legitimate C program or not? </p>\
+    <p>Consider the following program as another example. It produces different results in different compilers. </p>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                #include<stdio.h>
+                    int main()
+                    {
+                        int i = 1;
+                        printf("%d %d %d\n", ++i, i++, i);
+                        return 0;
+                    }
+                    
+
+            </code>
+          </pre>
+    </div>
+    
+    <div class="table">
+        <table border="2">
+            
+            <tr>
+                <td>2 1 3 -</td>
+                <td>using g++ 4.2.1 on Linux.i686 </td>
+            </tr>
+            <tr>
+                <td> 1 2 3 - </td>
+                <td> using SunStudio C++ 5.9 on Linux.i686</td>
+            </tr>
+            <tr>
+                <td> 2 1 3 - </td>
+                <td> using g++ 4.2.1 on SunOS.x86pc </td>
+            </tr>
+            <tr>
+                <td>1 2 3 - </td>
+                <td> using SunStudio C++ 5.9 on SunOS.x86pc </td>
+            </tr>
+            <tr>
+                <td>1 2 3 - </td>
+                <td> using g++ 4.2.1 on SunOS.sun4u </td>
+            </tr>
+            <tr>
+                <td>1 2 3 - </td>
+                <td>using SunStudio C++ 5.9 on SunOS.sun4u
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2>Which compiler is right?</h2>
+    <p>The answer to all such questions is C standard. In all such cases, we need to see what C standard says about such programs.</p>
+    <h2>What is C standard? </h2>
+    <p>The latest C standard is ISO/IEC 9899:2011, also known as C11 as the final draft was published in 2011. Before C11, there was C99. The C11 final draft is available here. See this for a complete history of C standards.</p>
+    <h2>Can we know the behavior of all programs from C standard? </h2>
+    <p>C standard leaves some behavior of many C constructs as undefined and some as unspecified to simplify the specification and allow some flexibility in implementation. For example, in C the use of any automatic variable before it has been initialized yields undefined behavior and order of evaluations of subexpressions is unspecified. This specifically frees the compiler to do whatever is easiest or most efficient, should such a program be submitted.</p>
+    <h2>So what is the conclusion about above two examples? </h2>
+    <p>Let us consider the first example which is “void main() {}”, the standard says following about prototype of main().</p>
+
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+            The function called at program startup is named main. The implementation 
+declares no prototype for this function. It shall be defined with a return 
+type of int and with no parameters:
+       int main(void) { /* ... */ }
+or with two parameters (referred to here as argc and argv, though any names 
+may be used, as they are local to the function in which they are declared):
+       int main(int argc, char *argv[]) { /* ... */ }
+or equivalent;10) or in some other implementation-defined manner.
+            </code>
+          </pre>
+    </div>
+    <p>So the return type void doesn’t follow the standard, and it’s something allowed by certain compilers.
+
+        Let us talk about second example. Note the following statement in C standard is listed under unspecified behavior.  </p>
+
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+    The order in which the function designator, arguments, and 
+subexpressions within the arguments are evaluated in a function 
+call (6.5.2.2). 
+  </code>
+</pre>
+</div>
+<h2>What to do with programs whose behavior is undefined or unspecified in standard? </h2>
+
+<p>As a programmer, it is never a good idea to use programming constructs whose behavior is undefined or unspecified, such programs should always be discouraged. The output of such programs may change with the compiler and/or machine.
+    This article is contributed by Abhay Rathi. Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above.
+     </p>
+     
+
+ 
+
+<hr>
+<div class="hor_row">
+
+</div>
+<footer class="foot">
+   <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+</footer>
+</body>
+
+</html>

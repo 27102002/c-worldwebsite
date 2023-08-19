@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+    <style>
+        /*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+    </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <hr>
+    <div class="hor_row">
+
+    </div>
+    <div class="rightside">
+        <h1>Operators In C: </h1>
+        <p>Today we are going to learn about operators. I will teach you guys the theory related to operators as well as
+            showing you the code as examples. So we will be using VS Code to write a few lines of codes for better
+            understanding of the topic. Let’s start with the definition:
+        </p>
+        <p><b>“Special symbols that are used to perform actions or operations are known as operators.”</b>
+
+            For example, the symbol plus (+) is used to perform addition so it is an operator.
+
+            We will discuss all sorts of operator here. Let’s start with the simpler one’s i.e. Arithmetic.
+        <h2>Arithmetic operators:</h2>
+        <p>Arithmetic operators are used to perform mathematical operations such as addition, subtraction etc. Few of
+            the simple arithmetic operators are :</p>
+        <div class="table">
+            <table border="2">
+                <tr>
+                    <td><b>Operator</b></td>
+                    <td><b>Description</b></td>
+
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>
+                        Addition </td>
+
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td> Subtraction </td>
+
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication </td>
+
+                </tr>
+                <tr>
+                    <td><b> /</b></td>
+                    <td> Division </td>
+
+                </tr>
+                <tr>
+                    <td>% </td>
+                    <td>Modulus</td>
+
+                </tr>
+
+            </table>
+        </div>
+        <p>We all know their purpose and how they are used in simple mathematics. Their purpose and functionality are
+            the same, let’s see their implementation in C.</p>
+
+
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                 int a = 2;
+   int b = 3;
+   printf("a + b = %d\n", a+b);
+
+            </code>
+          </pre>
+        </div>
+        <p>The output will be:</p>
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                a + b = 5
+
+            </code>
+          </pre>
+        </div>
+
+        <h2>Relational Operators:</h2>
+        <p>Relational operators are used for the comparison between two or more numbers. Same as Java, C also has six
+            relational operators and their return value is in Boolean i.e. either <b>True or False</b> (1 or 0). </p>
+        <div class="table">
+            <table border="2">
+                <tr>
+                    <td><b>Operator</b></td>
+                    <td><b>Description</b></td>
+
+                </tr>
+                <tr>
+                    <td>></td>
+                    <td>
+                        Greater than </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        < </td>
+                    <td> Less than </td>
+
+                </tr>
+                <tr>
+                    <td>>=</td>
+                    <td>Greater than or equal to</td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <= </td>
+                    <td> Less than or equal to </td>
+
+                </tr>
+                <tr>
+                    <td>== </td>
+                    <td>Is equal to</td>
+
+                </tr>
+                <tr>
+                    <td>!= </td>
+                    <td>
+                        Is not equal to</td>
+
+                </tr>
+            </table>
+        </div>
+        <p>Let’s go to VS Code now:</p>
+
+
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                int a = 2;
+                int b = 2;
+                printf("a == b = %d\n", a==b);
+             
+            </code>
+          </pre>
+        </div>
+        <p>The output is 1 i.e. True.</p>
+
+        <p>If we change the value of a or b the value will be false or 0.</p>
+        <div class="code-toolbar">
+            <pre class="language-c">
+            <code>
+                int a = 1;
+    int b = 2;
+    printf("a == b = %d\n", a==b);
+
+            </code>
+          </pre>
+        </div>
+        <p>The output is 0 i.e. False.</p>
+        <h2>Logical Operators:</h2>
+        <p>There are three logical operators i.e. AND, OR and NOT. They can be used to compare Boolean values but are
+            mostly used to compare conditions to see whether they are satisfying or not. </p>
+        <ol>
+            <li><b>AND:</b>it returns true when both operators are true or 1.</li>
+            <li> <b>OR:</b>it returns true when either operator is true or 1.</li>
+            <li><b>Not: </b>it is used to reverse the logical state of the operand..</li>
+
+        </ol>
+        <div class="table">
+            <table border="2">
+                <tr>
+
+                    <td><b>
+                            Symbol</b></td>
+                    <td><b>Operator</b></td>
+
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>
+                        AND operator </td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>
+                        OR Operator </td>
+                </tr>
+                <tr>
+                    <td>|</td>
+                    <td>
+                        NOT Operator </td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Example:</h3>
+
+    </div>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                int a = 1;
+    int b = 0;
+    printf("a or b = %d\n", a||b);
+</code>
+          </pre>
+    </div>
+    <p>Here the output is:</p>
+
+    </div>
+    <div class="code-toolbar">
+        <pre class="language-c">
+        <code>
+            a or b = 1
+
+        </code>
+      </pre>
+    </div>
+    <p>Let’s see what happens if both the values are zero</p>
+
+
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                int a = 0;
+                int b = 0;
+                printf("a or b = %d\n", a||b);
+            </code>
+          </pre>
+    </div>
+    <p>the output is:</p>
+
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+                a or b = 0
+                </code>
+</pre>
+    </div>
+    <h2>Bitwise Operators: </h2>
+    </ol>
+    <div class="table">
+        <table border="2">
+            <tr>
+
+                <td><b>
+                        Symbol</b></td>
+                <td><b>Operator</b></td>
+
+            </tr>
+            <tr>
+                <td>&</td>
+                <td>Bitwise AND </td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>Bitwise OR </td>
+            </tr>
+            <tr>
+                <td>^</td>
+                <td>Bitwise XOR </td>
+            </tr>
+            <tr>
+                <td>~</td>
+                <td>Bitwise complement </td>
+            </tr>
+            <tr>
+                <td>
+                    << </td>
+                <td>Shift left </td>
+            </tr>
+            <tr>
+                <td>>></td>
+                <td>Shift right </td>
+            </tr>
+        </table>
+    </div>
+    <h2>Assignment Operators:</h2>
+
+    <p>Assignment operators are used to assign values. They are going to be used in each and every one of our program.
+    </p>
+    <div class="code-toolbar">
+        <pre class="language-c">
+        <code>
+            int a = 0;
+            int b = 1;
+            </code>
+            </pre>
+    </div>
+    <p>Equal to (=) is the assignment operator here, assigning 0 to a and 1 to b.</p>
+    <div class="table">
+        <table border="2">
+            <td><b>Operator</b></td>
+            <td><b> Description</b></td>
+
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>Assigns values from right side operands to left side operand </td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>It adds the right operand to the left operand and assign the result to the left operand. </td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>It subtracts the right operand from the left operand and assigns the result to the left operand.
+                </td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>
+                    It multiplies the right operand with the left operand and assigns the result to the left operand.
+                </td>
+            </tr>
+            <tr>
+                <td>/= </td>
+                <td>
+                    It divides the left operand with the right operand and assigns the result to the left operand. </td>
+            </tr>
+
+        </table>
+        <h2>Conclusion:</h2>
+        <p>These are few of the important operators that you should know about before starting actual programming. There
+            are also many other operators such as &, % or *(pointer). I will let you know their details when working
+            with them but the few defined above will be used frequently so knowledge about them is important. You do not
+            have to remember them all as you can open the article any time again when required. </p>
+        <p>Code as described/written in the article</p>
+    </div>
+    <div class="code-toolbar">
+        <pre class="language-c">
+        <code>
+            #include
+            
+            int main()
+            {
+            /* code */
+            int a, b;
+            a = 2;
+            b = 3;
+            
+            printf("a & b = %d\n", a&b);
+            printf("a - b = %d\n", a-b);
+            printf("a * b = %d\n", a*b);
+            printf("a / b = %d\n", a/b);
+            
+            return 0;
+}
+        </code>
+</pre>
+    </div>
+    
+
+
+    <hr>
+    <div class="hor_row">
+
+    </div>
+    <footer class="foot">
+        <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+    </footer>
+</body>
+
+</html>

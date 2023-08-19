@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Control Statements In C</title>
+    <link rel="stylesheet" href="style_if_else.css">
+ <style>
+/*   .leftside nav{
+        position: absolute;
+        top: 25%;
+        right: 58%;
+        transform: translate(-50%,-50%);
+        background: black;
+        width: 400px;
+        line-height: 30px;
+        padding: 8px 25px;
+        height: 60px;
+    }
+    .leftside nav label{
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        display: block;
+        cursor: pointer;
+    }
+    .leftside nav .menu::before{
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        right: 20px;
+        top: -10px;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+    .leftside .button .fas{
+        float: right;
+        font-weight: bold;
+        line-height: 35;
+       color:white;
+    }
+    .leftside nav ul{
+        position: absolute;
+        
+        list-style: none;
+        top: 70px;
+        left: 0%;
+        width: 100%;
+        display: block;
+    }
+    .leftside nav ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        left: 0;
+        cursor: pointer;
+        background: #000;
+        border-bottom: 1px solid red;
+    }
+    .leftside nav ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li label{
+        font-size: 18px;
+    }
+    .leftside nav ul li span{
+        font-size: 20px;
+        float: right;
+        margin-top: 10px;
+
+    }
+    .leftside nav ul ul li a{
+        color: white;
+        font-size: 17px;
+    }
+    .leftside nav ul ul{
+        position: static;
+    }
+    .leftside nav ul ul li{
+        line-height: 30px;
+        padding-left: 30px;
+        border-bottom: none;
+    }
+    .leftside nav ul li a{
+        color:whitesmoke;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    .leftside nav ul li a:hover,
+    .leftside nav ul li label:hover{
+        color: cyan;
+    }
+*/
+ </style>
+</head>
+
+<body>
+    <header class="siteHeader ClearFix">
+        <nav>
+            <div class="logo">
+                <img src="c-world-removebg-preview.png" alt="">
+            </div>
+            <i class="fa fa-times"></i>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Learn</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="more.html">More</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header><hr>
+    <div class="hor_row">
+
+    </div>
+ <!---  <div class="leftside">
+        <nav>
+            <label for="" class="button">Drop Down
+                <span class="fas">+</span>
+            </label>
+            <ul class="menu">
+                <li><a href="#home">home</a></li>
+                <li>
+                    <label for="" class="first">features</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">pages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="" class="second">services</label>
+                    <span class="fas">+</span>
+                    <ul>
+                        <li><a href="#page">web design</a></li>
+                        <li><a href="#page">app design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+    --> 
+    <div class="rightside">
+    <h1>Why learning C Programming is a must?    </h1>
+    <p>Sometimes we want a set of instructions to be executed if certain condition is satisfied and an entirely
+        different set of instructions to be executed if the condition does not fulfil. This kind of situation is dealt
+        in C language using a decision control instruction. In today’s tutorial, we will discuss about if-else
+        statements in C programming.
+    </p>
+    <p>
+        Like other programming languages, C also uses the if keyword to implement the decision control instruction. The
+        condition for the if statement is always enclosed within a pair of parentheses. If the condition is true, then
+        the set of statements will execute. If the condition is not true then the statement will not execute, instead
+        the program skips that part.
+
+        We express a condition for if statements using relational operators. The relational operators allow us to
+        compare two values to see whether they are equal, unequal, greater than or less than.
+    </p>
+    <div class="table">
+        <table border="2">
+            <tr>
+                <td><b>Condition</b></td>
+                <td><b>Meaning</b></td>
+            </tr>
+            <tr>
+                <td>a == b</td>
+                <td> a is equal to b </td>
+            </tr>
+            <tr>
+                <td> a != b</td>
+                <td> a is not equal to b</td>
+            </tr>
+            <tr>
+                <td> a < b</td>
+                <td>a is less than b </td>
+            </tr>
+            <tr>
+                <td>a> b</td>
+                <td> a is greater than b </td>
+            </tr>
+            <tr>
+                <td>a <= b</td>
+                <td> a is less than or equal to b </td>
+            </tr>
+            <tr>
+                <td>a >= b</td>
+                <td>a is greater than or equal to b</td>
+            </tr>
+        </table>
+    </div>
+    <h1>The if-else Statement:</h1>
+    <p>The statement written in if block will execute when the expression following if evaluates to true. But when the
+        if is written with else block, then when the condition written in if block turns to be false, then the set of
+        statements in the else block will execute.
+
+        Following is the syntax of if-else statements:</p>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+            if(condition)
+            {
+                statement;
+            }
+            else
+            {
+                statement;
+            }
+            </code>
+          </pre>
+    </div>
+    <p>The statement written in if block will execute when the expression following if evaluates to true. But when the
+        if is written with else block, then when the condition written in if block turns to be false, then the set of
+        statements in the else block will execute.
+
+        Following is the example of if-else statements:</p>
+    <div class="code-toolbar">
+        <pre class="language-c">
+            <code>
+    #include< stdio.h >
+    #include< conio.h >
+    void main()
+    {
+     int a,b;
+     clrscr();
+     a=10;
+     b=20;
+     if(a>b)
+     {
+       printf("a is greater");
+     }
+     else
+     {
+       printf("b is greater");
+     }
+     getch();
+    }
+  </code>
+</pre>
+</div>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae Lorem ipsum dolor sit amet.</p>
+</div>
+ 
+
+<hr>
+<div class="hor_row">
+
+</div>
+<footer class="foot">
+   <h2> All rights reserved | C-World | Anushri Kudkyal</h2>
+</footer>
+</body>
+
+</html>
